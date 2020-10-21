@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        #box{
+            border: 1px solid black;
+            background-color: cornflowerblue;
+            width: 50%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #box div{
+            padding: 10px ;
+        }
+    </style>
+    <script src="Lab01.js"></script>
+    <script>
+        let calObj=new Calculator();
+        function addButton(){
+            let num1=document.getElementById("number1").value;
+            let num2=document.getElementById("number2").value;
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            document.getElementById("result").innerHTML="Result : "+calObj.add(num1,num2);
+        }
+        function subButton(){
+            let num1=document.getElementById("number1").value;
+            let num2=document.getElementById("number2").value;
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            document.getElementById("result").innerHTML="Result : "+calObj.subtract(num1,num2);
+        }
+        function mulButton(){
+            let num1=document.getElementById("number1").value;
+            let num2=document.getElementById("number2").value;
+            num1=parseInt(num1);
+            num2=parseInt(num2);
+            document.getElementById("result").innerHTML="Result : "+calObj.multiply(num1,num2);
+        }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h1>Calculator</h1>
+    <div>
+        <div>
+        <input type="number" id="number1" placeholder="Enter your Number 1" />
+        </div>
+        <div>
+        <input type="number" id="number2" placeholder="Enter your Number 2" />
+    </div></div>
+    <div>
+        <button onclick="addButton()">Add</button>
+        <button onclick="subButton()">Subtract</button>
+        <button onclick="mulButton()">Multiply</button>
+    </div>
+    <div>
+        <h4 id="result"></h4>
+    </div>
+</div>
+</body>
+</html>
