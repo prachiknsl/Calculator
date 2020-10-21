@@ -1,8 +1,4 @@
 class Calculator{
-    constructor(){
-        this.number1=0;
-        this.number2=0;
-    }
     add(number1,number2){
         return number1+number2;
     }
@@ -17,5 +13,3 @@ class Calculator{
     }
 
 }
-let cal=new Calculator();
-console.log(cal.add(2,3));
